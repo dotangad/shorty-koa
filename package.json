@@ -1,0 +1,25 @@
+{
+  "name": "shorty",
+  "version": "0.0.1",
+  "description": "No dependency link shortener.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotangad/shorty.git"
+  },
+  "keywords": [
+    "link",
+    "shortener",
+    "http",
+    "server"
+  ],
+  "author": "Angad Singh <mail@angad.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dotangad/shorty/issues"
+  },
+  "homepage": "https://github.com/dotangad/shorty#readme"
+}
