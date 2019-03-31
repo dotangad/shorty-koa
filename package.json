@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/dotangad/shorty/issues"
   },
-  "homepage": "https://github.com/dotangad/shorty#readme"
+  "homepage": "https://github.com/dotangad/shorty#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0"
+  }
 }
