@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const views = require('koa-views')
+const static = require('koa-static')
 const Router = require('koa-router')
 const fs = require('fs')
 const { promisify } = require('util')
@@ -10,6 +11,7 @@ const router = new Router()
 
 app.use(bodyParser())
 app.use(views('html', { extension: 'html' }))
+app.use(static('static'))
 
 app.use(async (ctx, next) => {
   console.log(ctx.request.url)
@@ -38,7 +40,7 @@ router.get('/all', async ctx => {
     'utf-8'
   )).replace('\n', '')
 
-  if (!password === correctPassword) {
+  if (password !== correctPassword) {
     ctx.status = 401
     ctx.body = 'Incorrect password'
     return
@@ -46,6 +48,8 @@ router.get('/all', async ctx => {
 
   ctx.body = await storage.readShortlinks('./shortlinks.json')
 })
+
+router.get('/create', async ctx => ctx.render('create'))
 
 router.post('/create', async ctx => {
   // Check password
@@ -110,7 +114,7 @@ router.delete('/:shortlink', async ctx => {
     return
   }
 
-  ctx.status = 400
+  ctx.status = 404
   ctx.body = "Doesn't exist"
 })
 

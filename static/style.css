@@ -1,0 +1,135 @@
+@import url('https://rsms.me/inter/inter.css');
+* {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 1px solid #999;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+input:focus {
+  border-color: #ff4545;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: #ff4545;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+
+button.delete {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+.container {
+  max-width: 700px;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 80px;
+  color: #ff4545;
+}
+
+.header h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.password {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.password input {
+  width: 200px;
+}
+
+.create {
+  padding: 50px 0;
+  padding-top: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logger {
+  padding-top: 50px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+table tr {
+  padding: 20px;
+}
+
+table tr:first-child {
+  font-weight: 600;
+}
+
+table td:nth-child(1) {
+  width: 20%;
+}
+
+table td:nth-child(2) {
+  width: 60%;
+}
+
+table td:nth-child(3) {
+  width: 20%;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 50px 20px !important;
+  }
+  .create {
+    flex-direction: column;
+    align-items: center;
+  }
+  .create input,
+  .create button {
+    margin: 10px 0;
+  }
+}
