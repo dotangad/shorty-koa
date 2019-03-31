@@ -129,4 +129,4 @@ router.get('/:shortlink', async ctx => {
 })
 
 app.use(router.routes(), router.allowedMethods())
-app.listen(3006)
+app.listen(6086)
